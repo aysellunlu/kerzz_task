@@ -1,0 +1,9 @@
+.form-control{
+    padding: 15px;
+    font-size: 14px !important;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif !important;
+    border: var(--bs-border-width) solid #fff !important;
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.082) !important;
+    color: #1A1824 !important;
+}
