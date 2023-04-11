@@ -30,14 +30,12 @@ const MainPage = () => {
         }
       );
       setRestaurants(data.response);
-      console.log("clg", data.response);
     };
 
     fetchData();
   }, []);
 
   useEffect(() => {
-    console.log("deneme", restaurants);
   }, [restaurants]);
   return (
     <Fragment>
