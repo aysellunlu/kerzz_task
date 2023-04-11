@@ -12,50 +12,26 @@ const Card = () => {
   const [dataKerzz, setDataKerzz] = useState("");
 
   useEffect(() => {
+    // axios.defaults.headers.common["apiKey"] = process.env.REACT_APP_API_KEY;
+     axios.defaults.headers.common["x-rapidapi-key"] = "apiKey";
+    axios.defaults.headers.common["apiKey"] =
+      "bW9jay04ODc3NTU2NjExMjEyNGZmZmZmZmJ2";
     const fetchData = async () => {
-      const data = await (
-        await fetch(
-          axios
-          .post(
-            "https://smarty.kerzz.com:4004/api/mock/getFeed",
-            {
-              headers: {
-                "x-rapidapi-key": "apiKey",
-              },
-            },
-            {
-              skip: 0,
-              limit: 0,
-              latitude: 0,
-              longitude: 0,
-            }
-          )
-        )
-      ).json();
-
-      setDataKerzz(data);
-    };
-
-    fetchData();
-    axios
-      .post(
+      const response = await axios.post(
         "https://smarty.kerzz.com:4004/api/mock/getFeed",
-        {
-          headers: {
-            "x-rapidapi-key": "apiKey",
-          },
-        },
+
         {
           skip: 0,
           limit: 0,
           latitude: 0,
           longitude: 0,
         }
-      )
-      .then((response) => console.log("aysel", response))
-      .catch(function (error) {
-        console.log(error);
-      });
+      );
+
+      console.log(response.data);
+    };
+
+    fetchData();
   }, []);
 
   return (
