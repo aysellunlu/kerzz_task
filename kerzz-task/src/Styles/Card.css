@@ -1,55 +1,59 @@
-.card-title{
-    font-size: 18px;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif ;
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
 }
-.card-style{
-    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.082) ;
-    border-radius: 10px;
+.card-style {
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
 }
-.detail-text{
-    font-size: 12px;
-    color: #1a18245d;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif !important;
+.detail-text {
+  font-size: 12px;
+  color: #1a18245d;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif !important;
 }
-.price-text{
-    font-size: 12px;
-    color: #1a18245d;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif !important;
+.price-text {
+  font-size: 12px;
+  color: #1a18245d;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif !important;
 }
-.distance-text{
-    font-size: 12px;
-    color: #1A1824;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif !important;
+.distance-text {
+  font-size: 12px;
+  color: #1a1824;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif !important;
 }
-.opentime-text{
-    font-size: 12px;
-    color: #1A1824;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif !important;
+.opentime-text {
+  font-size: 12px;
+  color: #1a1824;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif !important;
 }
 
-.shopping-icon{
-    margin-bottom: 5px;
+.shopping-icon {
+  margin-bottom: 5px;
 }
-.open-text{
-    font-size: 12px;
-    color: #34C47C;
-    font-weight: 600;
-    font-family: 'Josefin Sans', sans-serif !important;
+.open-text {
+  font-size: 12px;
+  color: #34c47c;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif !important;
 }
-.imagae-style{
-    position: absolute;
-    z-index: -1;
+.imagae-style {
+  position: absolute;
+  z-index: -1;
 }
-.point{
-    background-color: #B70014;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px;
-    border-radius: 5px;
+.point {
+  background-color: #b70014;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 3;
+  margin-top: 10px;
+  margin-left: 10px;
 }
