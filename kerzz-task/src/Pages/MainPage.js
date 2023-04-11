@@ -44,8 +44,8 @@ const MainPage = () => {
       <SearcBox />
       <div className="container title mb-2 mt-1">Sonuçlar</div>
       {restaurants?.map((item, index) => (
-        <Container className="card-style" key={index}>
-          <Col xs="3" className="point">
+        <Container className="card-style mb-4 pb-2" key={index}>
+          <Col className="point">
             <Row>
               <Col>
                 <img src={Star} width={8} />
@@ -57,28 +57,41 @@ const MainPage = () => {
             <img src={item?.images[0]?.base64} width="100%" />
           </div>
 
-          <div className="card-title mb-2 mt-2">{item?.title}</div>
+          <div className="card-title mb-2 mt-3">{item?.title}</div>
           <Row>
-            <Col xs="6" className="detail-text ">
-              Muhallebi, ekler
+            <Col xs="4" className="detail-text ">
+              {item?.type}
             </Col>
-            <Col xs="6">
+            <Col xs="8">
               <Row className="ml-3">
-                <Col xs="1" className="shopping-icon p-0">
-                  <img src={Basket} width="15" />
+                <Col xs="2">
+                  <div className="shopping-icon">
+                    <img src={Basket} width="15" />
+                  </div>
                 </Col>
-                <Col xs="11">
-                  <div className="price-text">Sipariş Tutarı : 30tl</div>
+                <Col xs="10">
+                  <div className="price-text">
+                    Min Sipariş Tutarı : {item?.storeInfo?.minOrderPrice}₺
+                  </div>
                 </Col>
               </Row>
             </Col>
           </Row>
           <Row>
-            <Col className="distance-text">3 km yakınında</Col>
-            <Col>
+            <Col xs="4" className="distance-text">
+              3 km yakınında
+            </Col>
+            <Col xs="8">
               <Row>
-                <Col className="open-text">{item?.storeInfo?.status}</Col>
-                <Col className="opentime-text">
+                <Col xs="2">
+                  {(item?.storeInfo?.status === "open" && (
+                    <div className="open-text"> Açık</div>
+                  )) ||
+                    (item?.storeInfo?.status === "close" && (
+                      <div className="close-text"> Kapalı</div>
+                    ))}
+                </Col>
+                <Col xs="10" className="opentime-text">
                   {item?.storeInfo?.workingHours[0]?.open} -{" "}
                   {item?.storeInfo?.workingHours[0]?.close}
                 </Col>
